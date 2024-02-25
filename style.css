@@ -1,8 +1,6 @@
 html, body {
-	background-color: black;
-	color: white;
 	font-family: helvetica, arial, sans-serif;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 1.5;
 	margin: 0;
 	padding: 0;
@@ -12,75 +10,49 @@ html, body {
 	margin: 0 auto;
 	max-width: 768px;
 	padding: 20px 5%;
+	
 }
 
-section {
-	background-color: #171717;
+.form-group {
+	display: flex;
+	align-items: center;
+	padding-top: 3em;
+	padding-bottom: 3em;
 }
 
-h1, h2 {
-	line-height: 1;
-	text-transform: uppercase;
+button {
+	border: 1px solid #cccccc; 
+	font-size: 16px;
+	padding: 10px;
+	border-radius: 5px;
 }
 
-h2 {
-	margin-top: 40px;
+.lb-input {
+	padding: 10px 15px 10px 35px; 
+	border: 1px solid #cccccc; 
+	border-radius: 5px; 
+	font-size: 16px; 
+	color: #333333;
+	background-color: #ffffff; 
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	outline: none; 
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: 30px 30px;
+	background-position: 3px 3px;
+  }
+
+  .lb-input:focus {
+	border-color: #666666; 
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  }
+
+#apple {
+	background-image: url(./apple.svg);
 }
 
-h2:first-of-type {
-	margin-top: 20px;
+#windows {
+	background-image: url(./windows.svg);
 }
 
-.logo {
-	display: block;
-}
 
-img {
-	height: auto;
-	max-width: 100%;
-}
-
-.logo img {
-	width: 500px;
-}
-
-@media all and (max-width: 768px) {
-	.logo img {
-		width: 450px;
-	}
-}
-
-@media all and (max-width: 479px) {
-	.logo img {
-		width: 350px;
-	}
-}
-
-.icon.heart {
-	color: lightcoral;
-}
-
-a {
-	color: aquamarine;
-	font-weight: bold;
-}
-
-a:hover, a:active {
-	color: mediumaquamarine;
-}
-
-a code {
-	color: black;
-}
-
-code {
-	background-color: aquamarine;
-	color: black;
-	font-family: monospace;
-	padding: 1px;
-	user-select: all;
-}
-
-code.image {
-	background-color: lightyellow;
-}

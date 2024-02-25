@@ -32,7 +32,6 @@ self.addEventListener("install", event => {
 				"favicon-16x16.png", // Favicon, default
 				"favicon-32x32.png", // Favicon, Safari on Mac OS
 				"index.html", // Main HTML file
-				"logo.png", // Logo
 				"main.js", // Main Javascript file
 				"manifest.json", // Manifest file
 				"maskable_icon.png", // Favicon, maskable https://web.dev/maskable-icon
@@ -42,7 +41,8 @@ self.addEventListener("install", event => {
 				"mstile-310x150.png", // Favicon, Windows 8 / IE11
 				"mstile-310x310.png", // Favicon, Windows 8 / IE11
 				"safari-pinned-tab.svg", // Favicon, Safari pinned tab
-				"share.jpg", // Social media sharing
+				"apple.svg", // Apple logo
+				"windows.svg", // Windows logo
 				"style.css", // Main CSS file
 			]);
 		})

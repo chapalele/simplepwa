@@ -4,27 +4,20 @@
  <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Simple PWA</title>
-	<link rel="canonical" href="https://simplepwa.com" />
+	<title>Link converter pwa</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<!-- Icons and Colors -->
-	<link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
-	<link rel="manifest" href="./icons/manifest.json">
-	<link rel="mask-icon" href="./icons/safari-pinned-tab.svg" color="#000000">
-	<link rel="shortcut icon" href="./icons/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+	<link rel="manifest" href="./manifest.json">
+	<link rel="mask-icon" href="./safari-pinned-tab.svg" color="#000000">
+	<link rel="shortcut icon" href="./favicon.ico">
 	<meta name="msapplication-TileColor" content="#000000">
-	<meta name="msapplication-TileImage" content="./icons/mstile-144x144.png">
-	<meta name="msapplication-config" content="./icons/browserconfig.xml">
+	<meta name="msapplication-TileImage" content="./mstile-144x144.png">
+	<meta name="msapplication-config" content="./browserconfig.xml">
 	<meta name="theme-color" content="#000000">
-	
-	<!-- SEO and Social Sharing and SEO -->
-	<meta name="description" content="Simple Progressive Web App (PWA) template" />
-	<meta name="robots" content="noodp" />
-	<meta name="author" content="Nicole Furlan">
-	<meta name="keywords" content="progressive web app, progressive web application, pwa, pwa progressive web app, pwa progressive web application, progressive app, basic progressive web app, basic progressive web application, basic pwa, example progressive web app, example progressive web application, example pwa, progressive web app basic, progressive web app builder, progressive web app example, progressive web app sample, progressive web app template, sample progressive web app, sample progressive web application, sample pwa, free progressive web application template, progressive web application template, progressive web app template free, progressive web app template free download, progressive web app html template, progressive web app template github" />
 
 	<!-- Styles -->
 	<link rel="stylesheet" href="style.css">
@@ -45,19 +38,31 @@
 	<header>
 		<div class="container">
 			<a href="./" class="logo" aria-label="Logo">
-				<img src="logo.png" alt="Logo">
+				<img src="./apple-touch-icon.png" alt="Logo">
 			</a>
-			<h1>Simple Progressive Web App (PWA) template</h1>
+			<h1>Link converter</h1>
 		</div>
 	</header>
 
 	<section>
 		<div class="container">
-			<h2 id="what">What is this?</h2>
-			<p><a href="https://github.com/nikkifurls/simple-pwa" target="_blank" rel="noopener">Simple PWA</a> is a Progressive Web App template that provides the minimum file structure needed to create a PWA&#x2014;a <a href="https://web.dev/what-are-pwas/#reliable" target="_blank" rel="noopener">reliable</a> and <a href="https://web.dev/what-are-pwas/#installable" target="_blank" rel="noopener">installable</a> web application. It's up to you to build upon it, to make it <a href="https://web.dev/what-are-pwas/#capable" target="_blank" rel="noopener">capable</a>.
-			<p>Simple PWA is "offline-first", using a <a href="https://developers.google.com/web/ilt/pwa/caching-files-with-service-worker#cache_then_network" target="_blank" rel="noopener">"cache first"</a> caching strategy, which means on load, two asynchronous requests are kicked off&#x2014;one to the cache, and one to the network. If there's a cached version available, it is used, but the updated version is fetched and stored for the next load. To force the cache to update from the network, change the value of <a href="https://github.com/nikkifurls/simple-pwa/blob/master/sw.js#L1" target="_blank" rel="nofollow noopener"><code>cacheName</code></a> in <a href="https://github.com/nikkifurls/simple-pwa/blob/master/sw.js" target="_blank" rel="nofollow noopener"><code>sw.js</code></a>.</p>
-
-			<h2 class="how">How do I use it?</h2>
+			<form id="form">
+				<div class="form-group">
+					<input type="text" id="apple" name="apple" class="lb-input" required>
+					<button type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+						<path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+						<path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+					  </svg></button>
+				</div>
+				<div class="form-group">
+					<input type="text" id="windows" name="windows" class="lb-input" required>
+					<button type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+						<path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+						<path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+					  </svg></button>
+				</div>
+			</form>
+			<div id="result"></div>
 
 		</div>
 	</section>
